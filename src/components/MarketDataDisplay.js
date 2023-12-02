@@ -55,7 +55,14 @@ const MarketDataDisplay = () => {
     { name: "Worst Performance", value: "change", order: "asc" },
   ];
   return (
-    <Box sx={{ mt: 3, height: "23rem", pb: 4, pl: screenSize > 1120 ? 0 : 2 }}>
+    <Box
+      sx={{
+        mt: 3,
+        height: "23rem",
+        pb: 4,
+        pl: screenSize > 1120 ? 0 : 1,
+      }}
+    >
       <Grid container sx={{ mb: 2, pr: 3 }}>
         <Grid xs={4} item>
           <Typography sx={{ mt: 1 }}>Name</Typography>

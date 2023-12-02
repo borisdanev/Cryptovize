@@ -14,8 +14,7 @@ const classes = {
   },
 };
 const UnregisteredDisplay = () => {
-  const { openRegisterForm, setOpenRegisterForm } =
-    useContext(RegisterModalContext);
+  const { setOpenRegisterForm } = useContext(RegisterModalContext);
   const screenSize = useScreenSize();
   return (
     <Box
@@ -30,8 +29,8 @@ const UnregisteredDisplay = () => {
     >
       <Typography
         color="white"
-        variant={screenSize > 1200 ? "h5" : "h6"}
-        style={{ width: "500px" }}
+        // variant={screenSize > 1200 ? "h5" : "h6"}
+        className="unregistered-text h5"
       >
         Ready to experience everything our platform has to offer? Register now!
       </Typography>
@@ -54,6 +53,38 @@ const UnregisteredDisplay = () => {
       </Button>
       <Box
         sx={{
+          position: "absolute",
+          left: "50%",
+          top: "50%",
+          backgroundColor: "white",
+          display: "flex",
+        }}
+      >
+        <Box sx={{ ...classes.iconContainer, top: "50%", left: "0" }}>
+          <img
+            src={Eth}
+            style={{
+              width: "clamp(3.75rem, 10vw, 5.76rem)",
+              height: "clamp(3.75rem, 10vw, 5.76rem)",
+              borderRadius: "50%",
+            }}
+            alt="coin logo"
+          />
+        </Box>
+        <Box sx={{ ...classes.iconContainer, top: "25%", right: "3rem" }}>
+          <img
+            src={Btc}
+            style={{
+              width: "3.75rem",
+              height: "3.75rem",
+              borderRadius: "50%",
+            }}
+            alt="coin logo"
+          />
+        </Box>
+      </Box>
+      {/* <Box
+        sx={{
           ...classes.iconContainer,
           right: screenSize > 1120 ? "15%" : screenSize > 950 ? "5%" : "1%",
           top: screenSize > 850 ? "15%" : "36%",
@@ -75,7 +106,7 @@ const UnregisteredDisplay = () => {
         }}
       >
         <img src={Btc} style={{ width: "60px", height: "60px" }} />
-      </Box>
+      </Box> */}
     </Box>
   );
 };

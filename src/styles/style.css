@@ -24,13 +24,7 @@ p {
 .h6 {
   font-size: clamp(1rem, 2vw, 1.25rem) !important;
 }
-/* .h5 {
-  font-size: clamp(1.37rem, 2.2vw, 1.87rem) !important;
-}
-.h6 {
-  font-size: clamp(0.8rem, 2vw, 0.9rem) !important;
-  font-weight: 500;
-} */
+
 .scrollable-list::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -49,6 +43,10 @@ p {
   background-color: rgba(0, 0, 0, 0);
   /* background-color: #57ebff; */
   border-radius: 10px;
+}
+.unregistered-text {
+  max-width: 100%;
+  /* width: clamp(20rem, 30vw, 31rem) !important; */
 }
 .bm-burger-button {
   position: absolute;
@@ -77,10 +75,6 @@ p {
   background: #bdc3c7;
 }
 
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
 .bm-menu-wrap {
   position: fixed;
   height: 100%;

@@ -1,16 +1,18 @@
 import CoinInfo from "./CoinInfo";
 const CoinInfoList = ({ coins }) => {
-  return coins?.map((item) => (
+  console.log(coins);
+  return coins?.map((coin) => (
     <CoinInfo
-      key={item.uuid}
-      name={item.name}
+      key={coin.uuid}
+      name={coin.name}
       price={[
-        item?.price.split(".")[0],
-        item?.price.split(".")[1].slice(0, 2),
+        coin?.price.split(".")[0],
+        coin?.price.split(".")[1].slice(0, 2),
       ].join(".")}
-      change={item.change}
-      marketCap={item.marketCap}
-      iconUrl={item.iconUrl}
+      change={coin.change}
+      marketCap={coin.marketCap}
+      iconUrl={coin.iconUrl}
+      symbol={coin.symbol}
     />
   ));
 };
