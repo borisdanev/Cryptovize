@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Montserrat:ital,wght@0,500;1,500&family=Roboto:wght@500&display=swap");
+body {
+  overflow: hidden;
+  font-family: "Montserrat", Halvecita;
+}
+p {
+  font-size: clamp(0.87rem, 2vw, 1.06rem) !important;
+}
+.h1 {
+  font-size: clamp(2rem, 5vw, 3rem) !important;
+}
+.h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem) !important;
+}
+.h3 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem) !important;
+}
+.h4 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem) !important;
+}
+.h5 {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem) !important;
+}
+.h6 {
+  font-size: clamp(1rem, 2vw, 1.25rem) !important;
+}
+/* .h5 {
+  font-size: clamp(1.37rem, 2.2vw, 1.87rem) !important;
+}
+.h6 {
+  font-size: clamp(0.8rem, 2vw, 0.9rem) !important;
+  font-weight: 500;
+} */
+.scrollable-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  /* background-color: #f5f5f5;
+   */
+  border-radius: 10px;
+}
+.scrollable-list::-webkit-scrollbar-track {
+  background-color: rgb(18, 18, 18);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+.scrollable-list::-webkit-scrollbar-thumb {
+  /* background-color: rgb(205, 205, 205);
+   */
+  background-color: rgba(0, 0, 0, 0);
+  /* background-color: #57ebff; */
+  border-radius: 10px;
+}
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 20px;
+  top: 36px;
+}
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  width: clamp(13rem, 30vw, 16rem) !important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #121212;
+  font-size: 1.15em;
+  overflow: hidden !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  padding: 0 !important;
+  width: auto !important;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 1200px) {
+  body {
+    overflow: scroll;
+  }
+  .bm-burger-button {
+    width: 36px;
+    height: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .search-bar {
+    padding: 0.3rem 0.3rem 0.3rem 2.3rem !important;
+  }
+}
+@media (max-width: 992px) {
+  .bm-burger-button {
+    width: 32px;
+    height: 26px;
+  }
+}
