@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 const CoinInfo = ({ name, price, change, marketCap, iconUrl }) => {
   return (
-    <Box sx={{ mb: 3 }} onClick={() => console.log("here")}>
+    <Box sx={{ mb: 3 }}>
       <Grid container>
         <Grid xs={4} sx={{ display: "flex", alignItems: "center" }} item>
           <img
