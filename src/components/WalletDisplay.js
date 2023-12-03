@@ -9,6 +9,14 @@ const WalletDisplay = () => {
   const coins = useSelector((state) => state.user.wallet.coins);
   const transactions = useSelector((state) => state.user.wallet.transactions);
   const screenSize = useScreenSize();
+  const titleStyle = {
+    mb: 1,
+    position: "absolute",
+    top: 0,
+    width: "50%",
+    bgcolor: "#0b1c29",
+    py: 2,
+  };
   return (
     <Box
       sx={{
@@ -20,15 +28,15 @@ const WalletDisplay = () => {
         borderRadius: "12px",
       }}
     >
-      <Grid container sx={{ height: "100%" }}>
+      <Grid container sx={{ height: "100%", position: "relative" }}>
         <Grid
           item
           xs={6}
           className="scrollable-list"
-          sx={{ overflowY: "auto", maxHeight: "100%" }}
+          sx={{ overflowY: "auto", maxHeight: "100%", pt: 5 }}
         >
           <Box sx={{ py: 2 }}>
-            <Typography sx={{ mb: 1 }} className="h6">
+            <Typography sx={titleStyle} className="h6">
               My Assets
             </Typography>
             {coins.length > 0 ? (
@@ -44,18 +52,22 @@ const WalletDisplay = () => {
           item
           xs={6}
           className="scrollable-list"
-          sx={{ overflowY: "auto", maxHeight: "100%" }}
+          sx={{
+            overflowY: "auto",
+            maxHeight: "100%",
+            pt: 5,
+          }}
         >
+          <Typography sx={titleStyle} className="h6">
+            Latest Transactions
+          </Typography>
           <Box sx={{ py: 2, pr: 1 }}>
-            <Typography sx={{ mb: 1 }} className="h6">
-              Latest Transactions
-            </Typography>
             {transactions.length > 0 ? (
               transactions.map((transaction, i) => (
                 <Transaction key={i} transaction={transaction} />
               ))
             ) : (
-              <Typography fontSize="1.3rem" color="info.main">
+              <Typography className="h6" color="info.main">
                 No transaction history
               </Typography>
             )}

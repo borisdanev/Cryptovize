@@ -51,7 +51,7 @@ const UnregisteredDisplay = () => {
       >
         Register
       </Button>
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           left: "50%",
@@ -82,18 +82,18 @@ const UnregisteredDisplay = () => {
             alt="coin logo"
           />
         </Box>
-      </Box>
-      {/* <Box
+      </Box> */}
+      <Box
         sx={{
           ...classes.iconContainer,
           right: screenSize > 1120 ? "15%" : screenSize > 950 ? "5%" : "1%",
-          top: screenSize > 850 ? "15%" : "36%",
+          top: screenSize > 850 ? "15%" : "40%",
         }}
       >
         <img
           style={{
-            width: screenSize > 870 ? "90px" : "60px",
-            height: screenSize > 870 ? "90px" : "60px",
+            width: "clamp(3.75rem, 10vw, 5.76rem)",
+            height: "clamp(3.75rem, 10vw, 5.76rem)",
           }}
           src={Eth}
         />
@@ -105,8 +105,8 @@ const UnregisteredDisplay = () => {
           right: "34%",
         }}
       >
-        <img src={Btc} style={{ width: "60px", height: "60px" }} />
-      </Box> */}
+        <img src={Btc} style={{ width: "3.75rem", height: "3.75rem" }} />
+      </Box>
     </Box>
   );
 };
