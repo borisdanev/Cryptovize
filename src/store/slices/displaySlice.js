@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const displaySlice = createSlice({
   name: "display",
-  initialState: null,
+  initialState: "Market Data",
   reducers: {
     selectDisplay(state, action) {
       return action.payload;

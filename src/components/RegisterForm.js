@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
 import useClearForm from "../hooks/useClearForm";
@@ -17,13 +18,16 @@ import FormHelperText from "@mui/material/FormHelperText";
 import Input from "@mui/material/Input";
 import InputLabel from "@mui/material/InputLabel";
 import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
+import { FaInfo } from "react-icons/fa";
+import AuthInfo from "./AuthInfo";
 const style = {
   position: "fixed",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: "25rem",
   bgcolor: "background.paper",
   border: "none",
   borderRadius: "5px",
@@ -33,6 +37,7 @@ const style = {
 const RegisterForm = ({ openModal, setOpenModal, setOpenLoginForm }) => {
   const dispatch = useDispatch();
   const clearForm = useClearForm();
+  const [infoOpen, setInfoOPen] = useState(true);
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required("First name is required"),
     lastName: Yup.string().required("Last name is required"),
@@ -67,6 +72,7 @@ const RegisterForm = ({ openModal, setOpenModal, setOpenLoginForm }) => {
       clearForm(values);
     },
   });
+
   return (
     <div className="register-container">
       <Modal
@@ -79,6 +85,12 @@ const RegisterForm = ({ openModal, setOpenModal, setOpenLoginForm }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          {infoOpen && <AuthInfo setInfoOpen={setInfoOPen} />}
+          <Box sx={{ display: "flex", justifyContent: "end" }}>
+            <IconButton onClick={() => setInfoOPen(true)}>
+              <FaInfo style={{ fontSize: "1.2rem" }} />
+            </IconButton>
+          </Box>
           <Typography
             id="modal-modal-title"
             variant="h6"
@@ -175,7 +187,7 @@ const RegisterForm = ({ openModal, setOpenModal, setOpenLoginForm }) => {
                 variant="contained"
                 style={{ marginTop: "1rem" }}
               >
-                Submit
+                Register
               </Button>
               <Typography sx={{ width: "8rem" }}>
                 Already have an account?

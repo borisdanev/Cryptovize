@@ -1,4 +1,5 @@
-import { Formik, useFormik, Form } from "formik";
+import { useState } from "react";
+import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
 import useClearForm from "../hooks/useClearForm";
 import {
@@ -17,7 +18,9 @@ import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 import Input from "@mui/material/Input";
 import InputLabel from "@mui/material/InputLabel";
-import { useEffect } from "react";
+import IconButton from "@mui/material/IconButton";
+import { FaInfo } from "react-icons/fa";
+import AuthInfo from "./AuthInfo";
 const style = {
   position: "absolute",
   top: "50%",
@@ -33,6 +36,7 @@ const style = {
 const LoginForm = ({ openModal, setOpenModal }) => {
   const dispatch = useDispatch();
   const clearForm = useClearForm();
+  const [infoOpen, setInfoOpen] = useState(true);
   const validationSchema = Yup.object().shape({
     email: Yup.string().test(
       "email-exists",
@@ -83,6 +87,12 @@ const LoginForm = ({ openModal, setOpenModal }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <Box sx={{ display: "flex", justifyContent: "end" }}>
+            <IconButton onClick={() => setInfoOpen(true)}>
+              <FaInfo style={{ fontSize: "1.2rem" }} />
+            </IconButton>
+          </Box>
+          {infoOpen && <AuthInfo setInfoOpen={setInfoOpen} />}
           <Typography
             id="modal-modal-title"
             variant="h6"

@@ -25,6 +25,7 @@ const drawerWidth = 240;
 const Sidebar = ({ darkMode, handleModeChange }) => {
   const dispatch = useDispatch();
   const [active, setActive] = useState("Market Data");
+  const [isOpen, setIsOpen] = useState(false);
   const screenSize = useScreenSize();
   useEffect(() => {
     dispatch(selectDisplay(active));
@@ -32,7 +33,6 @@ const Sidebar = ({ darkMode, handleModeChange }) => {
   const Content = (
     <Box
       display="flex"
-      className="something"
       flexDirection="column"
       justifyContent="space-between"
       height="100%"
@@ -60,7 +60,12 @@ const Sidebar = ({ darkMode, handleModeChange }) => {
                 bgcolor: item.text === active ? "#0b1c29" : "#121212",
               }}
             >
-              <ListItemButton onClick={() => setActive(item.text)}>
+              <ListItemButton
+                onClick={() => {
+                  setActive(item.text);
+                  setIsOpen(false);
+                }}
+              >
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.text} />
               </ListItemButton>
@@ -111,7 +116,13 @@ const Sidebar = ({ darkMode, handleModeChange }) => {
           {Content}
         </Drawer>
       ) : (
-        <Menu>{Content}</Menu>
+        <Menu
+          onOpen={() => setIsOpen(!isOpen)}
+          onClose={() => setIsOpen(!isOpen)}
+          isOpen={isOpen}
+        >
+          {Content}
+        </Menu>
       )}
     </Box>
   );
