@@ -28,7 +28,7 @@ const OverviewDisplay = () => {
     },
   });
   const periods = [
-    { label: "3 hours", value: "3h" },
+    // { label: "3 hours", value: "3h" },
     { label: "24 hours", value: "24h" },
     { label: "7 days", value: "7d" },
     { label: "30 days", value: "30d" },

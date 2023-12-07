@@ -16,6 +16,7 @@ const AuthInfo = ({ setInfoOpen }) => {
         right: "3.5rem",
         top: "3.5rem",
         bgcolor: "#848884",
+        bgcolor: "#0b1c29",
         color: "white",
         borderRadius: "10px",
       }}

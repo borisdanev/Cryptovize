@@ -37,19 +37,19 @@ const PriceChart = ({ data, period }) => {
     <div>
       <ResponsiveContainer width="95%" height={330}>
         <AreaChart
-          width={800}
-          height={300}
+          width={"50rem"}
+          height={"18.75rem"}
           data={chartData}
           syncId="anyId"
           margin={{
-            top: 10,
+            top: 5,
             right: 0,
             left: 0,
             bottom: 0,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="timestamp" />
+          <XAxis dataKey="timestamp" dy={5} />
           <YAxis
             tickCount={6}
             domain={[0, maxPrice + getNearestPrice(maxPrice / 3) * 2]}
