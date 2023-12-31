@@ -11,7 +11,7 @@ const CoinSelector = ({ main, style, setTradingCoin }) => {
   const [openSelector, setOpenSelector] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const currentCoin = useSelector((state) => state.coins);
-  const { data, error, isLoading } = useGetCoinsQuery({
+  const { data, isLoading } = useGetCoinsQuery({
     referenceCurrencyUuid: "yhjMzLPhuIDl",
     orderBy: "marketCap",
     orderDirection: "desc",
@@ -54,6 +54,7 @@ const CoinSelector = ({ main, style, setTradingCoin }) => {
           <img
             src={selectedOption?.iconUrl}
             style={{ width: "20px", height: "20px" }}
+            alt="coin logo"
           />
         </Box>
         <Typography ml={1} mr={3}>

@@ -14,8 +14,7 @@ const Header = ({ setOpenLoginForm }) => {
   const active = useCheckActivity();
   const user = useSelector((state) => state.user);
   const screenSize = useScreenSize();
-  const { openRegisterForm, setOpenRegisterForm } =
-    useContext(RegisterModalContext);
+  const { setOpenRegisterForm } = useContext(RegisterModalContext);
   return (
     <Box
       sx={{

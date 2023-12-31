@@ -33,6 +33,8 @@ const MainContent = () => {
                   <img
                     src={Buying}
                     style={{ width: "clamp(8rem,17vw,13rem)", mr: "0.5rem" }}
+                    draggable={false}
+                    alt="Crypto enthusiast beside a digital currency network"
                   />
                   <Typography textAlign="center">
                     Don't miss out on the next big thing. Buy crypto now.

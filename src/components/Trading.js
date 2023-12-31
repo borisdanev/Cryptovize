@@ -190,6 +190,7 @@ const Trading = ({
                   width: screenSize > 600 ? "30px" : "25px",
                   height: screenSize > 600 ? "30px" : "25px",
                 }}
+                alt="coin logo"
               />
             )}
             {type !== "swap" ? (

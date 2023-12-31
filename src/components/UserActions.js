@@ -109,6 +109,7 @@ const UserActions = ({ user: { firstName, wallet } }) => {
                 <img
                   src={URL.createObjectURL(selectedImage)}
                   style={{ width: "100%", borderRadius: "inherit" }}
+                  alt="profile picture"
                 />
               ) : (
                 <AiOutlineUser />
@@ -157,6 +158,7 @@ const UserActions = ({ user: { firstName, wallet } }) => {
                       <img
                         src={URL.createObjectURL(selectedImage)}
                         style={{ width: "100%", borderRadius: "inherit" }}
+                        alt="profile-picture"
                       />
                     ) : (
                       <AiOutlineUser />

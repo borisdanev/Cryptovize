@@ -67,7 +67,7 @@ const WalletDisplay = () => {
                 <Transaction key={i} transaction={transaction} />
               ))
             ) : (
-              <Typography className="h6" color="info.main">
+              <Typography fontsize="1.3rem" color="info.main">
                 No transaction history
               </Typography>
             )}

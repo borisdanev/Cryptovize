@@ -11,6 +11,7 @@ const CoinInfo = ({ name, price, change, marketCap, iconUrl, symbol }) => {
           <img
             src={iconUrl}
             style={{ display: "inlineBlock", width: "20px", height: "20px" }}
+            alt="coin logo"
           />
           <Typography sx={{ display: "inline-block", ml: 2 }}>
             {screenSize > 500 ? name : name.length > 12 ? symbol : name}

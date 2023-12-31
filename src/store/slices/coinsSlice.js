@@ -3,7 +3,7 @@ const coinsSlice = createSlice({
   name: "coins",
   initialState: null,
   reducers: {
-    selectCoin(state, action) {
+    selectCoin(_, action) {
       return action.payload;
     },
   },

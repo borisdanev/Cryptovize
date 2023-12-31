@@ -12,11 +12,9 @@ import SendDisplay from "./SendDisplay";
 import UnregisteredDisplay from "./UnregisteredDisplay";
 const Display = () => {
   const dispatch = useDispatch();
-  const [visitedDisplay, setVisitedDisplay] = useState("");
   const action = useSelector((state) => state.display);
   const active = useCheckActivity();
   useEffect(() => {
-    console.log(action);
     dispatch(clearError());
   }, [action]);
   if (action === "Market Data") return <MarketDataDisplay />;

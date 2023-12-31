@@ -31,6 +31,7 @@ const Selector = ({ options, handleOptionClick, data, style }) => {
                     key={i}
                     src={option[item.value]}
                     style={{ width: "15px", height: "15px" }}
+                    alt="coin logo"
                   />
                 )
               )}

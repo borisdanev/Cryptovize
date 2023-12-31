@@ -65,7 +65,6 @@ const LoginForm = ({ openModal, setOpenModal }) => {
     validateOnChange: false,
     validateOnBlur: false,
     onSubmit: async (values) => {
-      console.log("here");
       await validationSchema.validate(values, { abortEarly: false });
       const currentUser = await getUser(formik.values.email);
       dispatch(setCurrentUser(currentUser));

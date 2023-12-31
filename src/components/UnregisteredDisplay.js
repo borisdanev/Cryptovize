@@ -64,6 +64,7 @@ const UnregisteredDisplay = () => {
             height: "clamp(3.75rem, 10vw, 5.76rem)",
           }}
           src={Eth}
+          alt="Etherium logo"
         />
       </Box>
       <Box
@@ -73,7 +74,11 @@ const UnregisteredDisplay = () => {
           right: "34%",
         }}
       >
-        <img src={Btc} style={{ width: "3.75rem", height: "3.75rem" }} />
+        <img
+          src={Btc}
+          style={{ width: "3.75rem", height: "3.75rem" }}
+          alt="Bitcoin logo"
+        />
       </Box>
     </Box>
   );

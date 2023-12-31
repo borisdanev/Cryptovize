@@ -3,7 +3,7 @@ const displaySlice = createSlice({
   name: "display",
   initialState: "Market Data",
   reducers: {
-    selectDisplay(state, action) {
+    selectDisplay(_, action) {
       return action.payload;
     },
   },

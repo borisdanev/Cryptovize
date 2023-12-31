@@ -11,7 +11,7 @@ const OverviewDisplay = () => {
   const coin = useSelector((state) => state.coins);
   const [period, setPeriod] = useState("24h");
   const [activeButton, setActiveButton] = useState("24h");
-  const { data, error, isLoading } = useGetCoinPriceQuery({
+  const { data } = useGetCoinPriceQuery({
     id: coin.uuid,
     period,
   });

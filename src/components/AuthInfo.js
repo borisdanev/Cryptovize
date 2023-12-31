@@ -32,12 +32,12 @@ const AuthInfo = ({ setInfoOpen }) => {
         </IconButton>
       </Box>
       <Typography>
-        Note: The email doesn't have to be your real email you can use
+        Note: The email doesn't have to be your real email you can use a
         non-existing email, or you can use these pre-made accounts:
       </Typography>
       {[
-        { email: "some@gmail.com", password: "someforsome" },
-        { email: "new@gmail.com", password: "secondforsecond" },
+        { email: "john@gmail.com", password: "john12345" },
+        { email: "annalise@gmail.com", password: "annalise12345" },
       ].map((user, i) => (
         <Grid
           container

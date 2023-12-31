@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import TuneIcon from "@mui/icons-material/Tune";
 import Selector from "./Selector";
-import { Skeleton } from "@mui/material";
+import Skeleton from "@mui/material/Skeleton";
 const MarketDataDisplay = () => {
   const [category, setCategory] = useState("marketCap");
   const [order, setOrder] = useState("desc");
@@ -24,7 +24,7 @@ const MarketDataDisplay = () => {
       <Box pt={5}>
         {Array(6)
           .fill(null)
-          .map((item, i) => (
+          .map((_, i) => (
             <Box key={i} sx={{ display: "flex", alignItems: "center" }}>
               <Skeleton
                 variant="circular"

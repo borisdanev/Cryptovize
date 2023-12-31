@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   firstName: "Guest",
   lastName: "",
@@ -18,7 +18,7 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setCurrentUser(state, action) {
+    setCurrentUser(_, action) {
       const user = action.payload;
       return user;
     },
@@ -154,7 +154,7 @@ const userSlice = createSlice({
     clearError(state) {
       state.error = null;
     },
-    logOutUser(state) {
+    logOutUser(_) {
       return initialState;
     },
   },

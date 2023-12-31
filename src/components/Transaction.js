@@ -1,4 +1,3 @@
-import useScreenSize from "../hooks/useScreenSize";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -6,7 +5,6 @@ import SouthIcon from "@mui/icons-material/South";
 import NorthIcon from "@mui/icons-material/North";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 const Transaction = ({ transaction }) => {
-  const screenSize = useScreenSize();
   const selectIcon = () => {
     if (transaction.type === 0)
       return (

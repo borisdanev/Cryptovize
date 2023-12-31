@@ -18,7 +18,11 @@ const SellDisplay = () => {
         alignItems: "center",
       }}
     >
-      <img src={coin.iconUrl} style={{ width: "30px", height: "30px" }} />
+      <img
+        src={coin.iconUrl}
+        style={{ width: "30px", height: "30px" }}
+        alt="coin logo"
+      />
       <Typography sx={{ ml: 2 }} variant="h5">
         {coin.name}
       </Typography>
