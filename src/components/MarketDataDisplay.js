@@ -83,7 +83,10 @@ const MarketDataDisplay = () => {
           }}
         >
           <Typography sx={{ mt: 1 }}>24h</Typography>
-          <IconButton onClick={() => setOpenSelector(!openSelector)}>
+          <IconButton
+            aria-label="tune"
+            onClick={() => setOpenSelector(!openSelector)}
+          >
             <TuneIcon />
           </IconButton>
           {openSelector && (
